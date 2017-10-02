@@ -1,4 +1,4 @@
-package utilAntTips.tips;
+package tips;
 
 import org.junit.Test;
 
@@ -25,6 +25,6 @@ public class CharTest {
 
 }
 /**
- ÎÊÌâ£º
-1¡¢ÎªÊ²Ã´(char)48=0£¬¶ø(char)48 * 7È´=48*7=336ÄØ£¿
+ ï¿½ï¿½ï¿½â£º
+1ï¿½ï¿½ÎªÊ²Ã´(char)48=0ï¿½ï¿½ï¿½ï¿½(char)48 * 7È´=48*7=336ï¿½Ø£ï¿½
  */
