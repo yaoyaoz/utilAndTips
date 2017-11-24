@@ -4,7 +4,7 @@ import org.junit.Test;
 
 /**
  * 
- * 看实例化的类是不是自己期望的类
+ * @Description: 看实例化的类是不是自己期望的类
  * 
  * new A() instanceof B:如果A继承B，也会返回true
  * 
