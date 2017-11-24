@@ -19,6 +19,9 @@ import java.security.ProtectionDomain;
  *
  * 使用方法:
  * String jarPath = ClassLocationUtils.where(<类名>.class);
+ * 
+ * @author yaoyao
+ * 
  */
 public class ClassLocationUtils {
 

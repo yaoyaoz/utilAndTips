@@ -2,7 +2,12 @@ package tips;
 
 import org.junit.Test;
 
-public class CharTest {
+/**
+ * 
+ * @author yaoyao
+ *
+ */
+public class TestChar {
 
 	@Test
 	public void charTest() {
