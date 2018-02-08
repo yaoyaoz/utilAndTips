@@ -19,6 +19,7 @@ public class LambdaTest {
     public void test1() {
         List<String> list = Arrays.asList("danae", "lucy", "amy", "emilie");
         Collections.sort(list, new Comparator<String>() {
+            //问题：Comparator里面这么多方法，为什么必须要实现compare(T o1, T o2)呢？compare也不是抽象方法呀
             public int compare(String s1, String s2) {
                 return s1.compareTo(s2);//问题：这个是按着什么规则来排序的？
             }
