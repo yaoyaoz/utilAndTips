@@ -18,8 +18,6 @@ public class TestDynamicProxy {
      */
     IMath math = (IMath) new DynamicProxy().getProxyObject(new Math());
 
-    Message message = (Message) new DynamicProxy().getProxyObject(new Message());
-
     @Test
     public void test1() {
         math.add(1, 2);//问题：这里怎么调到proxy.dynamicAgent.jdk.DynamicProxy#invoke去的？
@@ -31,6 +29,7 @@ public class TestDynamicProxy {
      * 因为使用内置的Proxy实现动态代理有一个问题：
      * 被代理的类必须实现接口，未实现接口则没办法完成动态代理
      */
+    Message message = (Message) new DynamicProxy().getProxyObject(new Message());
     @Test
     public void test2() {
         message.send();
