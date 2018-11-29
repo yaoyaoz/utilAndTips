@@ -1,11 +1,13 @@
-package string;
+package jdkapi.string;
 
 import org.junit.Test;
 
 /**
+ * java.lang.String的jdk api方法测试
+ *
  * Created by yaoyao on 2018/6/27.
  */
-public class StringTest {
+public class TestString {
 
     /**
      * string.substring[begin, end);
@@ -29,7 +31,7 @@ public class StringTest {
      * 如果返回-1，则表示没找到
      */
     @Test
-    public void test() {
+    public void testLastIndexOf() {
         /**
          * abc.de.fgh
          * 0123456789
