@@ -23,4 +23,24 @@ public class StringTest {
          */
     }
 
+    /**
+     * string.lastIndexOf()：
+     * 返回当前角标向左第一次出现符号的角标，
+     * 如果返回-1，则表示没找到
+     */
+    @Test
+    public void test() {
+        /**
+         * abc.de.fgh
+         * 0123456789
+         */
+        String s1 = "abc.de.fgh";
+        int flag1 = s1.lastIndexOf(".", 2);//flag1=-1
+        int flag2 = s1.lastIndexOf(".", 5);//flag2=3
+        int flag3 = s1.lastIndexOf(".", 9);//flag3=6
+        System.out.println("flag1=" + flag1);
+        System.out.println("flag2=" + flag2);
+        System.out.println("flag3=" + flag3);
+    }
+
 }
