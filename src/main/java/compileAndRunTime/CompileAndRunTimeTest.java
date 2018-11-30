@@ -73,5 +73,14 @@ public class CompileAndRunTimeTest {
         System.out.println("evaluate(int param):param=" + param);
     }
 
+    /**
+     * 看到"方法覆盖" 链接：https://mp.weixin.qq.com/s/iX1b6ML1onT6Q8KOFf8LQQ
+     * 后面的没有太理解，就没有细看了。后面对jvm理解一下了，再来看吧
+     */
+    @Test
+    public void test() {
+
+    }
+
 }
 
