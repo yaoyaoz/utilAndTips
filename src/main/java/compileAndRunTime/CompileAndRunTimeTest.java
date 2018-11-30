@@ -57,8 +57,20 @@ public class CompileAndRunTimeTest {
      * 方法重载也被称为编译时多态，因为编译器可以根据参数的类型来选择使用哪个方法。
      */
     @Test
-    public void test() {
-//        。。写到这里
+    public void testMethodOverload () {
+        evaluate("string1");
+        /**
+         * 它会根据传入的参数是字符串常量，生成调用 #1 方法的字节码。
+         * 问题：生成的调用 #1 方法的字节码可以在哪看呢？反正在.class文件里面看不出来
+         */
+    }
+
+    public void evaluate(String param) {    //method #1
+        System.out.println("evaluate(String param):param=" + param);
+    }
+
+    public void evaluate(int param) {    //method #2
+        System.out.println("evaluate(int param):param=" + param);
     }
 
 }
