@@ -1,4 +1,4 @@
-package jdkapi.string;
+package java.jdkapi.string;
 
 import org.junit.Test;
 
