@@ -45,4 +45,15 @@ public class TestString {
         System.out.println("flag3=" + flag3);
     }
 
+    /**
+     * 字符串补位：
+     * String.format("%0" + 3 + "d", 12)
+     * 如果12不足3位，则在前面用0补足3位
+     */
+    @Test
+    public void testFormat() {
+        String s1 = String.format("%0" + 3 + "d", 12);
+        System.out.println(s1);
+    }
+
 }
