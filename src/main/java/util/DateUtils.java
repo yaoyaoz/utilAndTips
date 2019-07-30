@@ -1,5 +1,8 @@
 package util;
 
+import org.junit.Test;
+
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -38,6 +41,18 @@ public class DateUtils {
         calendar.set(year, month - 1, day);
         Date date = calendar.getTime();
         return date;
+    }
+
+    @Test
+    public void testTimeToDate() {
+        long time1 = 1564466861;
+        String result1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(time1 * 1000));
+        System.out.println("10位数的时间戳（秒）--->Date:" + result1);
+        Date date1 = new Date(time1*1000);   //对应的就是时间戳对应的Date
+
+        double time2 = 1564468254003d;
+        String result2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(time2);
+        System.out.println("13位数的时间戳（毫秒）--->Date:" + result2);
     }
 
 }
