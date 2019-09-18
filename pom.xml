@@ -6,6 +6,7 @@
 
     <groupId>com.yaoyao</groupId>
     <artifactId>utilAndTips</artifactId>
+    <packaging>pom</packaging>
     <version>1.0</version>
 
     <!-- 这个好像是idea自己加上去的，如果没有这个，用lambda表达式的时候好像会有红叉叉 -->
@@ -21,6 +22,9 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>sqlite</module>
+    </modules>
 
     <properties>
         <junit.version>4.12</junit.version>

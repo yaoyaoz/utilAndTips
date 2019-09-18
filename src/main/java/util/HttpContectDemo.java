@@ -19,6 +19,8 @@ public class HttpContectDemo {
 
     public static void main(String[] args) {
         String url = "http://localhost:8080/hello.html";
+//        String url = "127.0.0.1:8080/demo.html";
+//        String url = "http://127.0.0.1:8080/demo.html";
         Map<String, String> map = new HashMap<>();
         map.put("topName", "tottt");
         map.put("key", "啦啦啦空间eee");
