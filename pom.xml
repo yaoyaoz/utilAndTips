@@ -24,6 +24,8 @@
     </build>
     <modules>
         <module>sqlite</module>
+        <module>thriftClient</module>
+        <module>thriftServer</module>
     </modules>
 
     <properties>
