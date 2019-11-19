@@ -26,6 +26,7 @@
         <module>sqlite</module>
         <module>thriftClient</module>
         <module>thriftServer</module>
+        <module>vertx</module>
     </modules>
 
     <properties>
@@ -100,6 +101,11 @@
             <version>2.6</version>
         </dependency>
 
-    </dependencies>
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis</artifactId>
+            <version>1.4</version>
+        </dependency>
 
+    </dependencies>
 </project>
