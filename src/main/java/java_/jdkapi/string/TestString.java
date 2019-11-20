@@ -30,7 +30,7 @@ public class TestString {
 
     /**
      * 截取字符串的某一段内容：
-     * 使用正则表达式
+     * 使用正则表达式.
      */
     @Test
     public void test() {
