@@ -2,6 +2,9 @@ package java_.jdkapi.string;
 
 import org.junit.Test;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * java.lang.String的jdk api方法测试
  *
@@ -23,6 +26,20 @@ public class TestString {
          123四
          123四五678
          */
+    }
+
+    /**
+     * 截取字符串的某一段内容：
+     * 使用正则表达式
+     */
+    @Test
+    public void test() {
+        String filetext = "//@张小名: 25分//@李小花: 43分//@王力: 100分";
+        Pattern p = Pattern.compile("\\@(.*?)\\:");//正则表达式，取@和:之间的字符串
+        Matcher m = p.matcher(filetext);
+        while(m.find()) {
+            System.out.println("m.group(0)=" + m.group(0) + "\tm.group(1)=" + m.group(1));//m.group(0)包括这两个字符；m.group(1)不包括这两个字符
+        }
     }
 
     /**
