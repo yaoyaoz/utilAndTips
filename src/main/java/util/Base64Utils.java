@@ -37,7 +37,9 @@ public class Base64Utils {
         }
     }
 
-    //base64转文件
+    /**
+     * base64转文件
+     */
     public void base64ToImg(String base64, String fileName, String suffix) {
         byte[] img = base64ToByte(base64);
         doSave(img, fileName, suffix);
