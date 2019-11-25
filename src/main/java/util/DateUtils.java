@@ -55,4 +55,10 @@ public class DateUtils {
         System.out.println("13位数的时间戳（毫秒）--->Date:" + result2);
     }
 
+    public static String dateString() {
+        SimpleDateFormat SimpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:MM:ss:SSS");
+        String date = SimpleDateFormat.format(new Date());
+        return SimpleDateFormat.format(new Date());
+    }
+
 }
