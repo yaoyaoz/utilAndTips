@@ -19,7 +19,10 @@ import java.security.ProtectionDomain;
  *
  * 使用方法:
  * String jarPath = ClassLocationUtils.where(<类名>.class);
- * 
+ *
+ * 或者：
+ * 在idea断点调试时，按alt+F8，弹出Evaluate Expression对话框，输入“ClassLocationUtils.where(<类名>.class)”
+ *
  * @author yaoyao
  * 
  */
