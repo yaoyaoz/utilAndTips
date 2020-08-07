@@ -27,6 +27,7 @@
         <module>thriftClient</module>
         <module>thriftServer</module>
         <module>vertx</module>
+        <module>jwt</module>
     </modules>
 
     <properties>
