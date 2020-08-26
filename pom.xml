@@ -28,6 +28,7 @@
         <module>thriftServer</module>
         <module>vertx</module>
         <module>jwt</module>
+        <module>javacore</module>
     </modules>
 
     <properties>
@@ -39,6 +40,8 @@
         <cglib.version>3.2.4</cglib.version>
         <com.google.guava.version>19.0</com.google.guava.version>
         <org.slf4j.version>1.7.7</org.slf4j.version>
+        <lombok.version>1.18.10</lombok.version>
+        <logback.version>1.2.3</logback.version>
     </properties>
 
     <dependencies>
@@ -106,6 +109,17 @@
             <groupId>org.apache.axis</groupId>
             <artifactId>axis</artifactId>
             <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
         </dependency>
 
     </dependencies>
