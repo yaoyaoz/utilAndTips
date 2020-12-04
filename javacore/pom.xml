@@ -11,5 +11,17 @@
 
     <artifactId>javacore</artifactId>
 
+    <properties>
+        <qrcodr.version>3.3.3</qrcodr.version>
+    </properties>
+
+    <dependencies>
+        <!-- 二维码 -->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>${qrcodr.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
