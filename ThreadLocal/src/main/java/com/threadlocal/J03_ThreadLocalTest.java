@@ -5,29 +5,27 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * ClassName: J02_ThreadScopeShareData
- * Description: 两个线程get到的data数据是隔离开的
+ * ClassName: J03_ThreadLocalTest
+ * Description: ThreadLocal用法
  * Date: 2020年12月17日
  *
  * @author yaoyao
  * @version 1.0.0
  * @since 1.8
  */
-public class J02_ThreadScopeShareData {
+public class J03_ThreadLocalTest {
 
-    private static int data = 0;
-
-    private static Map<Thread, Integer> threadData = new HashMap<Thread, Integer>();
+    static ThreadLocal<Integer> threadLocal = new ThreadLocal<>();
 
     public static void main(String[] args) {
         for (int i = 0; i < 2; i++) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    data = new Random().nextInt();
+                    int data = new Random().nextInt();
                     System.out.println(Thread.currentThread().getName() +
                             " has put data: " + data);
-                    threadData.put(Thread.currentThread(), data);
+                    threadLocal.set(data);
                     new A().get();
                     new B().get();
                 }
@@ -37,7 +35,7 @@ public class J02_ThreadScopeShareData {
 
     static class A {
         public void get() {
-            int currentData = threadData.get(Thread.currentThread());
+            int currentData = threadLocal.get();
             System.out.println("A from " + Thread.currentThread().getName() +
                     " get data: " + currentData);
         }
@@ -45,7 +43,7 @@ public class J02_ThreadScopeShareData {
 
     static class B {
         public void get() {
-            int currentData = threadData.get(Thread.currentThread());
+            int currentData = threadLocal.get();
             System.out.println("B from " + Thread.currentThread().getName() +
                     " get data: " + currentData);
         }
