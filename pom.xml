@@ -29,6 +29,7 @@
         <module>jwt</module>
         <module>javacore</module>
         <module>ThreadLocal</module>
+        <module>java</module>
     </modules>
 
     <properties>
@@ -128,6 +129,12 @@
             <groupId>net.lingala.zip4j</groupId>
             <artifactId>zip4j</artifactId>
             <version>${zip4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>2.3.0</version>
         </dependency>
 
     </dependencies>
