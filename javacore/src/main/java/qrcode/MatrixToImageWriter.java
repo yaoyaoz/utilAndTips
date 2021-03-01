@@ -5,9 +5,11 @@ import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
+import sun.misc.BASE64Encoder;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -45,9 +47,26 @@ public class MatrixToImageWriter {
 
     public static void writeToFile(BitMatrix matrix, String format, File file) throws IOException {
         BufferedImage image = toBufferedImage(matrix);
-        if (!ImageIO.write(image, format, file)) {
-            throw new IOException("Could not write an image of format " + format + " to " + file);
+//        if (!ImageIO.write(image, format, file)) {
+//            throw new IOException("Could not write an image of format " + format + " to " + file);
+//        }
+        String base64 = bufferedImageToBase64(image);
+        System.out.println("base64:" + base64);
+    }
+
+    private static String bufferedImageToBase64(BufferedImage bufferedImage) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();//io流
+        try {
+            ImageIO.write(bufferedImage, "jpg", baos);//写入流中
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        byte[] bytes = baos.toByteArray();//转换成字节
+        BASE64Encoder encoder = new BASE64Encoder();
+        String png_base64 = encoder.encodeBuffer(bytes).trim();//转换成base64串
+        png_base64 = png_base64.replaceAll("\n", "").replaceAll("\r", "");//删除 \r\n
+        System.out.println("值为：" + "data:image/jpg;base64," + png_base64);
+        return "data:image/jpg;base64," + png_base64;
     }
 
     public static void main(String[] args) {
