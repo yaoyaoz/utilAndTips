@@ -30,6 +30,7 @@
         <module>javacore</module>
         <module>ThreadLocal</module>
         <module>java</module>
+        <module>algorithm</module>
     </modules>
 
     <properties>
