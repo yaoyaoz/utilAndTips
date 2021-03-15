@@ -71,7 +71,8 @@ public class CronExpParser {
 
     public static void main(String[] args) {
 //        String CRON_EXPRESSION = "4 5 6 ? * 2-6 *";
-        String CRON_EXPRESSION = "0 0 19~22 ? * 2-6 *";
+//        String CRON_EXPRESSION = "0 0 19~22 ? * 2-6 *";
+        String CRON_EXPRESSION = "0 0 4 ? * 2-6";//每周一~周五 凌晨4点执行
         System.out.println(CRON_EXPRESSION);
         List<String> lTime = new ArrayList<String>();
         lTime = CronExpParser.parser(CRON_EXPRESSION);
