@@ -59,7 +59,12 @@ class HttpClientUtil {
             e.printStackTrace();
         } finally {
             try {
-                response.close();
+                if (response != null) {
+                    response.close();
+                }
+                if (httpClient != null) {
+                    httpClient.close();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
