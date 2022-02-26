@@ -44,7 +44,7 @@
         <org.slf4j.version>1.7.7</org.slf4j.version>
         <lombok.version>1.18.10</lombok.version>
         <logback.version>1.2.3</logback.version>
-        <zip4j.version>2.6.4</zip4j.version>
+        <zip4j.version>2.9.1</zip4j.version>
     </properties>
 
     <dependencies>
